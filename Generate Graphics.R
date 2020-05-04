@@ -1,10 +1,10 @@
 library(ggplot2)
 library(ggthemes)
 
-load("~/DScourseS20/TwitterProject/ProcessedTweets/statistics.Rda")
-load("~/DScourseS20/TwitterProject/ProcessedTweets/poll_avg_nat.Rda")
-load("~/DScourseS20/TwitterProject/ProcessedTweets/poll_avg_state.Rda")
-results <- read.csv("~/DScourseS20/TwitterProject/ProcessedTweets/results.csv", header = TRUE)
+load("~/statistics.Rda")
+load("~/poll_avg_nat.Rda")
+load("~/poll_avg_state.Rda")
+results <- read.csv("~/results.csv", header = TRUE)
 
 dev.off()
 
