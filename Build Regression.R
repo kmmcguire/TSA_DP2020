@@ -1,4 +1,4 @@
-regtable <- read.csv("~/DScourseS20/TwitterProject/ProcessedTweets/regtable.csv", header = TRUE)
+regtable <- read.csv("~/regtable.csv", header = TRUE)
 regmatrix <- regtable[,c(2,4,5,6,7,8,9,10,11)]
 regmatrix.cor = cor(regmatrix)
 
