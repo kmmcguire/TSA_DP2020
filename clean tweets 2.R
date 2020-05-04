@@ -1,4 +1,4 @@
-load("~/DScourseS20/TwitterProject/Candidates.Rda")
+load("~/Candidates.Rda")
 library(tidyverse)
 library(sentimentr)
 
@@ -10,7 +10,7 @@ endDay = 10
 
 for (j in startDay:endDay) {
   loopDate = paste0(startYear,"-",startMonth,"-",formatC(j, width = 2, format ="d", flag = "0"))
-  setwd("~/DScourseS20/TwitterProject/RawTweets")
+  setwd("~/RawTweets")
   loopFile = paste0(loopDate,".Rda")
   my_files <- list.files(pattern = loopFile)
   for (k in my_files){
