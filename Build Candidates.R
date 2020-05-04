@@ -44,5 +44,5 @@ notes <- c('', #Bernie Sanders
            '') #Andrew Yang
 
 tweets <- data.frame(candidate, tag, handle, dropout, notes) 
-save(tweets,file="~/DScourseS20/TwitterProject/Candidates.Rda")
+save(tweets,file="~/Candidates.Rda")
 
