@@ -15,7 +15,7 @@ for (j in startDay:endDay) {
                     formatC(startMonth, width = 2, format ="d", flag = "0"),"-",
                     formatC(j, width = 2, format ="d", flag = "0"))
   
-  setwd("~/DScourseS20/TwitterProject/ProcessedTweets")
+  setwd("~/ProcessedTweets")
   loopFile = paste0(loopDate,"_sentiment.Rda")
   my_files <- list.files(pattern = loopFile)
   my_data <- lapply(my_files, load, .GlobalEnv)
@@ -83,7 +83,7 @@ for (j in startDay:endDay) {
     cs <- rbind(cs, yang_output_df)
     rm(yang_output_df)
   }
-  save(cs, file = paste0("~/DScourseS20/TwitterProject/ProcessedTweets/",loopDate,"_cs.Rda"))
+  save(cs, file = paste0("~/",loopDate,"_cs.Rda"))
   #rm(cs)
 }
   
