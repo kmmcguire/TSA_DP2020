@@ -1,6 +1,6 @@
 library(rtweet)
 #Load Candidates
-load("~/DScourseS20/TwitterProject/Candidates.Rda")
+load("~/Candidates.Rda")
 
 #Set date range from target start date to date after target end date
 dateStart = as.Date("2020-03-29")
