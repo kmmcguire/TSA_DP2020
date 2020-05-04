@@ -1,0 +1,78 @@
+---
+title: "Predicting Elections with Twitter"
+author: "Kevin McGuire"
+date: "4/28/2020"
+output:
+  powerpoint_presentation:
+    reference_doc: temp.pptx
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Democratic Primary + Sentiment Analysis
+
+Predicting elections through polling faces many difficulties: Low response rates. Technologic change. Lag between surverying and reporting. 
+
+In a world where people willingly post endless political content on social media, can mining that data solve some of these problems?
+
+## Democratic Primary + Sentiment Analysis
+
+My project was to perform a basic exploration of the potential of using sentiment analysis on political Tweets as a predictor of election performance. The Democratic presidential primary would be my test case.
+
+## Data - What to collect?
+
+I decided to collect all Tweets that mentioned a major candidate's official Twitter handle. In cases where an individual had more than one, whichever was primarily associated with their campaign activities was used. Over 1.1 million Tweets were downloaded in total.
+
+Major candidates were determined by polling average and debate invitations. (Biden, Bloomberg, Buttigieg, Klobuchar, Sanders, Steyer, Warren, and Yang)
+
+## Data - When to collect?
+
+I ran my collection program daily from February 4th to March 10th. This captured the majority of the competitive primary season. Ultimately, I trimmed the range to end on March 4th due to the race winding down, and not wanting to include coronavirus Tweets.
+
+## Data - How to collect?
+
+I had a multistage process for collecting the Tweets and transforming them into useful data. The Tweets would be downloaded using Twitter's API and the rtweet package. Each downloaded Tweet contained 90 columns. All but the date and text would be removed, and the content run through the sentimentr package to determine a sentiment score for each Tweet. Files would be combined and aggrigated by candidate and day.
+
+## Data - Measures
+
+- Count Tweets
+- Percent Tweets
+- Total Absolute Sentiment
+- Total Sentiment
+- Percent Sentiment
+- Average Absolute Sentiment
+- Average Sentiment
+
+## Limitations
+
+- Twitter is not representative
+- I'm cheap
+- COVID-19
+
+## Results
+
+![](results.png)
+
+## Results
+![](npa.png)
+
+## Results
+![](as.png)
+
+## Results
+![](pt.png)
+
+## Results
+
+![](cor.png)
+
+## Conclusions
+
+Not enough results were observed for any groundbreaking discoveries, but promise was shown even amongst the individual variables. Several performed around the level of National Polling Average.
+
+## Improvements/Further Study
+
+- Twitter location data
+- More elections
